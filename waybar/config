@@ -1,0 +1,64 @@
+{
+    "layer": "top",
+    "position": "top", 
+    "height": 36, 
+    "spacing": 6,
+    "modules-left": ["hyprland/workspaces", "tray", "hyprland/window"],
+    "modules-center": [],
+    "modules-right": ["network", "pulseaudio", "memory", "cpu", "clock", "custom/power"],
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*": 10
+        },
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    "hyprland/window": {
+        "format": "\u2006»\u2006{initialTitle}",
+        "separate-outputs": true
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S %m-%d-%Y}",
+        "format-alt": "{:%H:%M:%S %m-%d-%Y}",
+        "tooltip-format": "Take a break, write some code, do what you do best."
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "{usage}%",
+        "tooltip": true
+    },
+    "memory": {
+        "interval": 1,
+        "format": "{used}G",
+        "tooltip": true,
+        "tooltip-format": "RAM: {used}G / {total}G\nSwap: {swapUsed}G / {swapTotal}G"
+    },
+    "network": {
+        "interval": 1,
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "format-ethernet": "↓{bandwidthDownBits} ↑{bandwidthUpBits}",
+        "format-linked": "No IP ({ifname})",
+        "format-disconnected": "Disconnected",
+        "tooltip-format": "{ifname} {ipaddr}/{cidr} via {gwaddr}",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon}{volume}%",
+        "format-muted": "MUTED",
+        "format-bluetooth": "{icon}{volume}%",
+        "format-bluetooth-muted": "{icon}MUTED",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click-right": "pavucontrol",
+        "ignored-sinks": ["AudioRelay Virtual Sink", "Recorder Sink"]
+    }
+}
