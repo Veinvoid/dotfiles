@@ -1,11 +1,11 @@
 {
     "layer": "top",
     "position": "top", 
-    "height": 36, 
+    "height": 42, 
     "spacing": 6,
-    "modules-left": ["hyprland/workspaces", "tray", "hyprland/window"],
-    "modules-center": [],
-    "modules-right": ["network", "pulseaudio", "memory", "cpu", "clock", "custom/power"],
+    "modules-left": ["hyprland/workspaces", "tray","network"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio", "cpu" , "memory", "clock", "custom/power"],
     "hyprland/workspaces": {
         "format": "{name}",
         "persistent-workspaces": {
@@ -16,47 +16,50 @@
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "hyprland/window": {
-        "format": "\u2006»\u2006{initialTitle}",
+        "format": "\u2006  run:\u2006{initialTitle}",
         "separate-outputs": true
     },
     "tray": {
-        "icon-size": 21,
-        "spacing": 10
+        "icon-size": 22,
+        "spacing": 8
     },
     "clock": {
         "interval": 1,
-        "format": "{:%H:%M:%S %m-%d-%Y}",
-        "format-alt": "{:%H:%M:%S %m-%d-%Y}",
-        "tooltip-format": "Take a break, write some code, do what you do best."
+        "format": "\u2006\uf017   {:%H:%M:%S  \uf133   %m-%d\u2006/\u2006%Y}\u2006",
+        "tooltip-format": " Take a break, write some code, do what u do best. "
     },
     "cpu": {
         "interval": 1,
-        "format": "{usage}%",
+        "format": "\u2006\uf2db   {usage}%\u2006",
         "tooltip": true
     },
     "memory": {
         "interval": 1,
-        "format": "{used}G",
+        "format": "\u2006   {used}G\u2006",
         "tooltip": true,
         "tooltip-format": "RAM: {used}G / {total}G\nSwap: {swapUsed}G / {swapTotal}G"
     },
     "network": {
         "interval": 1,
-        "format-wifi": "{essid} ({signalStrength}%)",
-        "format-ethernet": "↓{bandwidthDownBits} ↑{bandwidthUpBits}",
-        "format-linked": "No IP ({ifname})",
-        "format-disconnected": "Disconnected",
-        "tooltip-format": "{ifname} {ipaddr}/{cidr} via {gwaddr}",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": "\u2006   {essid} ({signalStrength}%)\u2006",
+        "format-ethernet": "\u2006   ↓{bandwidthDownBits} ↑{bandwidthUpBits}\u2006",
+        "format-linked": "\u2006   No IP ({ifname})\u2006",
+        "format-disconnected": "\u2006   Disconnected\u2006",
+        "tooltip-format": "\u2006   {ifname} {ipaddr}/{cidr} via {gwaddr}\u2006",
+        "format-alt": "\u2006   {ifname}: {ipaddr}/{cidr} ↓{bandwidthDownBits} ↑{bandwidthUpBits}\u2006"
     },
     "pulseaudio": {
         "scroll-step": 5,
-        "format": "{icon}{volume}%",
-        "format-muted": "MUTED",
-        "format-bluetooth": "{icon}{volume}%",
-        "format-bluetooth-muted": "{icon}MUTED",
+        "format": "\u2006{icon}{volume}%\u2006",
+        "format-muted": "\u2006   MUTED\u2006",
+        "format-bluetooth": "\u2006   {icon}{volume}%\u2006",
+        "format-bluetooth-muted": "\u2006   {icon}MUTED\u2006",
         "format-icons": {
-            "default": ["", "", ""]
+            "default": [
+                "   ",
+                "   ",
+                "   "
+            ]
         },
         "on-click-right": "pavucontrol",
         "ignored-sinks": ["AudioRelay Virtual Sink", "Recorder Sink"]

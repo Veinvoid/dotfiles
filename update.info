@@ -1,0 +1,6 @@
+1. Reconstruct the content of the waybar, including some display content and colors, as well as fine-tuning of position, font, font size, etc.;
+2. Added the theme profile of SDDM Login and provided a preview in README.md.
+3. Removed some content from the hyprland configuration file and made adjustments to software floating window issues such as calculators;
+4. Compress the image in the warehouse to reduce the volume;
+5. Other adjustments have been made;
+September 07 /2024

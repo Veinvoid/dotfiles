@@ -1,9 +1,9 @@
 * {
-    font-family: 'Proxima Nova', 'Ubuntu Mono', 'Ubuntu';
+    font-family: 'Proxima Nova';
     font-weight: 400;
     font-size: 18px;
 
-    border-radius: 16px;
+    border-radius: 24px;
     text-shadow: none;
     
     transition-property: background;
@@ -34,8 +34,8 @@ window#waybar.hidden {
 }
 
 #workspaces {
-    padding: 3px;
-	background: rgba(31, 31, 31, 1.0);
+    padding: 4px;
+    background: rgba(33, 33, 33, 0.9);
 	transition: none;
 
     font-size: 12px;
@@ -87,38 +87,38 @@ window#waybar.hidden {
 }
 
 #clock {
-    background-color: #ffffff;
-    color: #000000;
+    background: #202020;
+    color: #ffffff;
 }
 
 #cpu {
-    background-color: #ff8a7d;
-    color: #000000;
+    background: #202020;
+    color: #ffffff;
 }
 
 #memory {
-    background-color: #fce5a2;
-    color: #000000;
+    background: #202020;
+    color: #ffffff;
 }
 
 #pulseaudio {
-    background-color: #71ffde;
-    color: #000000;
+    background: #202020;
+    color: #ffffff;
 }
 
 #network {
-    background-color: #50d3ff;
-    color: #000000;
+    background: #202020;
+    color: #ffffff;
 }
 
 #tray {
-    background-color: rgba(85, 85, 85, 0.350);
+    background: rgba(33, 33, 33, 0.9);
 }
 
 #window {
     font-family: 'Ubuntu Mono', 'Comfortaa', sans-serif;
     font-weight: 400;
-    background-color: #c1e8ff;
-    color: #000000;
+    background: rgba(33, 33, 33, 0.9);
+    color: #ffffff;
 }
 
